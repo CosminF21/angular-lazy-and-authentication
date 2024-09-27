@@ -34,4 +34,8 @@ export class AppComponent implements OnInit{
   get isAuthenticated(){
     return this.oidcSecurityService.isAuthenticated();
   }
+
+  logout(){
+    this.oidcSecurityService.logoff().subscribe();
+  }
 }

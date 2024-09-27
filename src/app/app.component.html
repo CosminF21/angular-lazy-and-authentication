@@ -4,6 +4,11 @@
   <p>Not Logged</p>
 </ng-template>
 
+<button *ngIf="(isAuthenticated | async) === true"
+    (click)="logout()">
+  Logout
+</button>
+
 <!--<nav>-->
 <!--  <ul>-->
 <!--    <li><a routerLink="/first">First Component</a></li>-->
