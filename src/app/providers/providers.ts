@@ -1,7 +1,6 @@
 import {AppInitializerService} from "../servicies/app-initializer.service";
 import {APP_INITIALIZER} from "@angular/core";
 import {AuthService} from "@auth0/auth0-angular";
-import {PassedInitialConfig} from "angular-auth-oidc-client/lib/auth-config";
 import {LogLevel} from "angular-auth-oidc-client";
 
 function configFactory(config: AppInitializerService, auth: AuthService) {
@@ -15,7 +14,7 @@ export const ApplicationInitializerProvider = {
   multi: true,
 };
 
-export const authConfig: PassedInitialConfig = {
+export const authConfig = {
   config: {
     postLoginRoute: window.location.origin,
       forbiddenRoute: '/forbidden',
