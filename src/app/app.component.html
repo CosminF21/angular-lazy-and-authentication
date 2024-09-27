@@ -1,0 +1,13 @@
+<h2>Test Routing and Lazy Loading</h2>
+<p *ngIf="(isAuthenticated | async) === true; else notAuthenticated">You are logged in</p>
+<ng-template #notAuthenticated>
+  <p>Not Logged</p>
+</ng-template>
+
+<!--<nav>-->
+<!--  <ul>-->
+<!--    <li><a routerLink="/first">First Component</a></li>-->
+<!--    <li><a routerLink="/second">Second Component</a></li>-->
+<!--  </ul>-->
+<!--</nav>-->
+<router-outlet/>
